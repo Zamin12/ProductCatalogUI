@@ -1,0 +1,50 @@
+﻿@model ProductCatalogUI.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+        <dd class="col-sm-10">
+            @if (!string.IsNullOrEmpty(Model.Photo))
+            {
+                <img src="data:image/png;base64,@Model.Photo" id="@Model.Id" width="200" height="200" />
+            }
+            else
+            {
+                <img src="data:image/jpeg;base64,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" width="200" height="200" />
+            }
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    <a asp-action="Index">Back to List</a>
+</div>
