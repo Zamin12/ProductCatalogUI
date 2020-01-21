@@ -1,0 +1,64 @@
+﻿@model dynamic
+
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>SystemInfo</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            <label>Version</label>
+        </dt>
+        <dd class="col-sm-2">
+            <label>@Model.Version</label>
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            <label>Server Time</label>
+        </dt>
+        <dd class="col-sm-2">
+            <label>@Model.ServerTime</label>
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            <label>AspNetCore Environment</label>
+        </dt>
+        <dd class="col-sm-2">
+            <label>@Model.AspNetCoreEnvironment</label>
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            <label>Machine Name</label>
+        </dt>
+        <dd class="col-sm-2">
+            <label>@Model.MachineName</label>
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            <label>Environment Name</label>
+        </dt>
+        <dd class="col-sm-2">
+            <label>@Model.EnvironmentName</label>
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            <label>Database Provider Name</label>
+        </dt>
+        <dd class="col-sm-2">
+            <label>@Model.ProviderName</label>
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

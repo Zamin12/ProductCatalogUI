@@ -49,8 +49,8 @@ namespace ProductCatalogUI.Factories
             if (vm == null) return "";
 
             List<string> conditions = new List<string>();
-            if (!string.IsNullOrEmpty(vm.Code)) conditions.Add($"code={vm.Code}");
-            if (!string.IsNullOrEmpty(vm.Name)) conditions.Add($"name={vm.Name}");
+            if (!string.IsNullOrEmpty(vm.Code)) conditions.Add($"code={Uri.EscapeDataString(vm.Code)}");
+            if (!string.IsNullOrEmpty(vm.Name)) conditions.Add($"name={Uri.EscapeDataString(vm.Name)}");
             if (vm.StartPrice > 0) conditions.Add($"startPrice={vm.StartPrice}");
             if (vm.EndPrice > 0) conditions.Add($"endPrice={vm.EndPrice}");
 

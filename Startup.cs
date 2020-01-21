@@ -38,6 +38,12 @@ namespace ProductCatalogUI
                 c.BaseAddress = new Uri(Configuration.GetSection("ProductCatalogAPI")["BaseUrl"]);
             }).AddHttpMessageHandler<AcceptHeaderHttpMessageHandler>()
               .AddHttpMessageHandler<EnsureSuccessHttpMessageHandler>();
+
+            services.AddHttpClient<ISystemInfoService, SystemInfoService>(c =>
+            {
+                c.BaseAddress = new Uri(Configuration.GetSection("ProductCatalogAPI")["SystemInfoUrl"]);
+            }).AddHttpMessageHandler<AcceptHeaderHttpMessageHandler>()
+              .AddHttpMessageHandler<EnsureSuccessHttpMessageHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
