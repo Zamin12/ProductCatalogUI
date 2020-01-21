@@ -13,6 +13,8 @@ Features:
 * Unit tests for controller and service.
 * Simple and clear UI design.
 * Additional controller for System information and status of RESTFul API service.
+* Special infrastructure service and handlers for HttpClient.
+* Helper for excel fileexport.
 
 ## Technologies
 
