@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>SystemInfo</h1>
+<h4>System Info (RESTFul API)</h4>
+<hr />
 
 <div>
-    <hr />
     <dl class="row">
         <dt class="col-sm-2">
             <label>Version</label>
@@ -60,5 +60,5 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" asp-controller="ProductCatalog" class="btn btn-secondary btn-sm">Back to List</a>
 </div>

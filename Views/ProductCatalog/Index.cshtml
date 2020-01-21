@@ -5,21 +5,26 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Product Catalog</h1>
-
+<h4>Product Catalog</h4>
+<hr />
 <p>
-    <a asp-action="Create">Create product</a> &nbsp;&nbsp;&nbsp;
-    <a asp-action="Filter"><span class="glyphicon glyphicon-search"></span> Filter Products</a> &nbsp;&nbsp;&nbsp;
-    <a asp-action="ExportToExcel"><span class="glyphicon glyphicon-search"></span> Export to Excel</a>
+    <a asp-action="Create" class="btn btn-success btn-sm">Create product</a> &nbsp;&nbsp;&nbsp;
+    <a asp-action="Filter" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-search"></span> Filter Products</a> &nbsp;&nbsp;&nbsp;
+    <a asp-action="ExportToExcel" class="btn btn-secondary btn-sm"><span class="glyphicon glyphicon-search"></span> Export to Excel</a>
+
+    @if (!string.IsNullOrEmpty(@ViewBag.filterText))
+    {
+        <span class="float-right">@ViewBag.filterText <a asp-action="Index" class="btn btn-danger btn-sm">Clear</a></span>
+    }
 </p>
 
 <p>
-    @ViewBag.filterText
+
 </p>
 
-<table class="table">
+<table class="table table-bordered table-hover">
     <thead>
-        <tr>
+        <tr class="table-primary">
             <th>
                 @Html.DisplayNameFor(model => model.Code)
             </th>
@@ -59,9 +64,9 @@
                     @Html.DisplayFor(modelItem => item.Price)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit product", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("View product", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Remove product", "Delete", new { id = item.Id })
+                    @Html.ActionLink("Edit product", "Edit", "ProductCatalog", new { id = item.Id }, new { @class = "btn btn-outline-success btn-sm" })
+                    @Html.ActionLink("View product", "Details", "ProductCatalog", new { id = item.Id }, new { @class = "btn btn-outline-info btn-sm" })
+                    @Html.ActionLink("Remove product", "Delete", "ProductCatalog", new { id = item.Id }, new { @class = "btn btn-outline-danger btn-sm" })
                 </td>
             </tr>
         }
