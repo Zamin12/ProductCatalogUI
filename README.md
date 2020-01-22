@@ -10,7 +10,7 @@ It provides add, edit, remove, view and filter, export to excel actions.
 Features: 
 * ASP.NET Core MVC framework.
 * Asynchronous actions.
-* Unit tests for controller and service.
+* Unit tests for service.
 * Simple and clear UI design.
 * Additional controller for System information and status of RESTFul API service.
 * Special infrastructure service and handlers for HttpClient.
