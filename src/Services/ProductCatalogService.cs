@@ -9,12 +9,7 @@ namespace ProductCatalogUI.Services
 {
     public class ProductCatalogService : BaseHttpClientService, IProductCatalogService
     {
-        private readonly HttpClient _httpClient;
-
-        public ProductCatalogService(HttpClient httpClient) : base(httpClient)
-        {
-            _httpClient = httpClient;
-        }
+        public ProductCatalogService(HttpClient httpClient) : base(httpClient) { }
 
         public async Task<IEnumerable<Product>> GetAllProducts() => await Get<IEnumerable<Product>>("Products");
 
