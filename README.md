@@ -24,6 +24,14 @@ Frameworks and packages:
 * Newtonsoft.Json: 12.0.3
 * DocumentFormat.OpenXml: 2.10.0
 
+Test project frameworks and packages: 
+
+* Microsoft.NET.Test.SDK: 16.4.0
+* Microsoft.EntityFrameworkCore.InMemory: 3.1.1
+* xunit: 2.4.1
+* xunit.runner.visualstudio: 2.4.1
+* Moq: 4.13.1
+
 Tools: 
 
 * Visual Studio Professional: 16.3.9
