@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/zismailov/ProductCatalog/_apis/build/status/Zamin12.ProductCatalogUI?branchName=master)](https://dev.azure.com/zismailov/ProductCatalog/_build/latest?definitionId=2&branchName=master)
+
 ## Product Catalog UI
   
 MVC Web App for Managing product catalog solution.
